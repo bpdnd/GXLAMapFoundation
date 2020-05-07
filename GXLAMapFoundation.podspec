@@ -9,8 +9,8 @@
 Pod::Spec.new do |s|
   s.name             = 'GXLAMapFoundation'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of GXLAMapFoundation.'
-
+  s.summary          = 'GXLAMapFoundation.'
+  s.swift_version    =  '5'
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
 #   * Try to keep it short, snappy and to the point.
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+GXLAMapFoundation 高德地图基础
                        DESC
 
   s.homepage         = 'https://github.com/bpdnd/GXLAMapFoundation'
@@ -28,9 +28,34 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/bpdnd/GXLAMapFoundation.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
-
-  s.source_files = 'GXLAMapFoundation/Classes/**/*'
+  s.ios.deployment_target = '10.0'
+  
+  s.source_files = 'GXLAMapFoundation/Vendors/AMapFoundation-NO-IDFA/*.framework/Headers/**.h',
+  s.public_header_files = 'GXLAMapFoundation/Vendors/AMapFoundation-NO-IDFA/*.framework/Headers/**.h'
+  s.frameworks = 'UIKit', 'SystemConfiguration','CoreTelephony','Security','GLKit'
+  s.libraries  = 'c++'
+  s.dependency 'GZIP'
+  s.vendored_frameworks =  'GXLAMapFoundation/Vendors/AMapFoundation-NO-IDFA/*.framework'
+  s.preserve_paths = 'GXLAMapFoundation/Vendors/AMapFoundation-NO-IDFA/*.framework'
+  s.pod_target_xcconfig = {
+            'HEADER_SEARCH_PATHS' => '$(PODS_ROOT)/GXLAMapFoundation/Vendors/AMapFoundation-NO-IDFA/*.framework/Headers',
+            'LD_RUNPATH_SEARCH_PATHS' => '$(PODS_ROOT)/GXLAMapFoundation/Vendors/AMapFoundation-NO-IDFA/',
+            'OTHER_LDFLAGS' => '-ObjC'
+  }
+  
+  s.prepare_command = <<-EOF
+    # 创建Base Module
+    rm -rf GXLAMapFoundation/Vendors/AMapFoundation-NO-IDFA/AMapFoundationKit.framework/Modules
+    mkdir GXLAMapFoundation/Vendors/AMapFoundation-NO-IDFA/AMapFoundationKit.framework/Modules
+    touch GXLAMapFoundation/Vendors/AMapFoundation-NO-IDFA/AMapFoundationKit.framework/Modules/module.modulemap
+    cat <<-EOF > GXLAMapFoundation/Vendors/AMapFoundation-NO-IDFA/AMapFoundationKit.framework/Modules/module.modulemap
+    framework module AMapFoundationKit {
+      umbrella header "AMapFoundationKit.h"
+      export *
+    }
+    \EOF
+  EOF
+  
   
   # s.resource_bundles = {
   #   'GXLAMapFoundation' => ['GXLAMapFoundation/Assets/*.png']

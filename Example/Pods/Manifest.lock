@@ -1,0 +1,16 @@
+PODS:
+  - GXLAMapFoundation (0.1.0)
+
+DEPENDENCIES:
+  - GXLAMapFoundation (from `../`)
+
+EXTERNAL SOURCES:
+  GXLAMapFoundation:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  GXLAMapFoundation: a60f423cb5a7b6e88eea1a4ab9a9d0fc5003b295
+
+PODFILE CHECKSUM: 2fc852e0bc4dec2496a66ccbf260d2ebc8faaa46
+
+COCOAPODS: 1.7.5
