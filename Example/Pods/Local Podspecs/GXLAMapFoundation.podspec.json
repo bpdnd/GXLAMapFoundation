@@ -1,8 +1,9 @@
 {
   "name": "GXLAMapFoundation",
   "version": "0.1.0",
-  "summary": "A short description of GXLAMapFoundation.",
-  "description": "TODO: Add long description of the pod here.",
+  "summary": "GXLAMapFoundation.",
+  "swift_versions": "5",
+  "description": "GXLAMapFoundation 高德地图基础",
   "homepage": "https://github.com/bpdnd/GXLAMapFoundation",
   "license": {
     "type": "MIT",
@@ -16,7 +17,33 @@
     "tag": "0.1.0"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "10.0"
   },
-  "source_files": "GXLAMapFoundation/Classes/**/*"
+  "public_header_files": "GXLAMapFoundation/Vendors/AMapFoundation-NO-IDFA/*.framework/Headers/**.h",
+  "source_files": [
+    "GXLAMapFoundation/Vendors/AMapFoundation-NO-IDFA/*.framework/Headers/**.h",
+    "GXLAMapFoundation/Vendors/AMapFoundation-NO-IDFA/*.framework/Headers/**.h"
+  ],
+  "frameworks": [
+    "UIKit",
+    "SystemConfiguration",
+    "CoreTelephony",
+    "Security",
+    "GLKit"
+  ],
+  "libraries": "c++",
+  "dependencies": {
+    "GZIP": [
+
+    ]
+  },
+  "vendored_frameworks": "GXLAMapFoundation/Vendors/AMapFoundation-NO-IDFA/*.framework",
+  "preserve_paths": "GXLAMapFoundation/Vendors/AMapFoundation-NO-IDFA/*.framework",
+  "pod_target_xcconfig": {
+    "HEADER_SEARCH_PATHS": "$(PODS_ROOT)/GXLAMapFoundation/Vendors/AMapFoundation-NO-IDFA/*.framework/Headers",
+    "LD_RUNPATH_SEARCH_PATHS": "$(PODS_ROOT)/GXLAMapFoundation/Vendors/AMapFoundation-NO-IDFA/",
+    "OTHER_LDFLAGS": "-ObjC"
+  },
+  "prepare_command": "# 创建Base Module\nrm -rf GXLAMapFoundation/Vendors/AMapFoundation-NO-IDFA/AMapFoundationKit.framework/Modules\nmkdir GXLAMapFoundation/Vendors/AMapFoundation-NO-IDFA/AMapFoundationKit.framework/Modules\ntouch GXLAMapFoundation/Vendors/AMapFoundation-NO-IDFA/AMapFoundationKit.framework/Modules/module.modulemap\ncat <<-EOF > GXLAMapFoundation/Vendors/AMapFoundation-NO-IDFA/AMapFoundationKit.framework/Modules/module.modulemap\nframework module AMapFoundationKit {\n  umbrella header \"AMapFoundationKit.h\"\n  export *\n}\nEOF",
+  "swift_version": "5"
 }

@@ -1,6 +1,9 @@
 CONFIGURATION_BUILD_DIR = ${PODS_CONFIGURATION_BUILD_DIR}/GXLAMapFoundation
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/GZIP" "${PODS_ROOT}/../../GXLAMapFoundation/Vendors/AMapFoundation-NO-IDFA"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-OTHER_SWIFT_FLAGS = $(inherited) -D COCOAPODS
+HEADER_SEARCH_PATHS = $(inherited) $(PODS_ROOT)/GXLAMapFoundation/Vendors/AMapFoundation-NO-IDFA/*.framework/Headers
+LD_RUNPATH_SEARCH_PATHS = $(inherited) $(PODS_ROOT)/GXLAMapFoundation/Vendors/AMapFoundation-NO-IDFA/
+OTHER_LDFLAGS = $(inherited) -ObjC -l"c++" -framework "CoreTelephony" -framework "GLKit" -framework "Security" -framework "SystemConfiguration" -framework "UIKit"
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
 PODS_ROOT = ${SRCROOT}

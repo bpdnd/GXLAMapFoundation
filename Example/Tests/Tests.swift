@@ -1,5 +1,5 @@
 import XCTest
-import GXLAMapFoundation
+//import GXLAMapFoundation
 
 class Tests: XCTestCase {
     

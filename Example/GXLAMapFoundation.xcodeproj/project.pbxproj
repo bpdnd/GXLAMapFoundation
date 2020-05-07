@@ -14,6 +14,11 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		84A34B072463A279007CECCB /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A34B062463A279007CECCB /* Security.framework */; };
+		84A34B092463A281007CECCB /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A34B082463A281007CECCB /* CoreTelephony.framework */; };
+		84A34B0B2463A28E007CECCB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A34B0A2463A28E007CECCB /* SystemConfiguration.framework */; };
+		84A34B0D2463A298007CECCB /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A34B0C2463A298007CECCB /* GLKit.framework */; };
+		84A34B0F2463A29F007CECCB /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A34B0E2463A29F007CECCB /* libc++.tbd */; };
 		B9A7CB3F7363BA78C8C3AA4C /* Pods_GXLAMapFoundation_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D173D1789FAED0C3918F85AD /* Pods_GXLAMapFoundation_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +46,11 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		631A84C90E2525DCAB1CA1C2 /* Pods-GXLAMapFoundation_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GXLAMapFoundation_Example.debug.xcconfig"; path = "Target Support Files/Pods-GXLAMapFoundation_Example/Pods-GXLAMapFoundation_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		84A34B062463A279007CECCB /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		84A34B082463A281007CECCB /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		84A34B0A2463A28E007CECCB /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		84A34B0C2463A298007CECCB /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		84A34B0E2463A29F007CECCB /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		9C0A13846EA6068CAF03F09F /* GXLAMapFoundation.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = GXLAMapFoundation.podspec; path = ../GXLAMapFoundation.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A1C1EA36E321FA6E8FB01B6D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		B6C53CD66B2AA7967CC98793 /* Pods-GXLAMapFoundation_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GXLAMapFoundation_Example.release.xcconfig"; path = "Target Support Files/Pods-GXLAMapFoundation_Example/Pods-GXLAMapFoundation_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -54,6 +64,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84A34B0F2463A29F007CECCB /* libc++.tbd in Frameworks */,
+				84A34B0D2463A298007CECCB /* GLKit.framework in Frameworks */,
+				84A34B0B2463A28E007CECCB /* SystemConfiguration.framework in Frameworks */,
+				84A34B092463A281007CECCB /* CoreTelephony.framework in Frameworks */,
+				84A34B072463A279007CECCB /* Security.framework in Frameworks */,
 				B9A7CB3F7363BA78C8C3AA4C /* Pods_GXLAMapFoundation_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -153,6 +168,11 @@
 		D004986A61CFE974E8050E1E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				84A34B0E2463A29F007CECCB /* libc++.tbd */,
+				84A34B0C2463A298007CECCB /* GLKit.framework */,
+				84A34B0A2463A28E007CECCB /* SystemConfiguration.framework */,
+				84A34B082463A281007CECCB /* CoreTelephony.framework */,
+				84A34B062463A279007CECCB /* Security.framework */,
 				D173D1789FAED0C3918F85AD /* Pods_GXLAMapFoundation_Example.framework */,
 				F9753183CE234CD0B28C4679 /* Pods_GXLAMapFoundation_Tests.framework */,
 			);
@@ -212,10 +232,12 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 2L4B26T69J;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 2L4B26T69J;
 						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -269,11 +291,11 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-GXLAMapFoundation_Example/Pods-GXLAMapFoundation_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/GXLAMapFoundation/GXLAMapFoundation.framework",
+				"${BUILT_PRODUCTS_DIR}/GZIP/GZIP.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GXLAMapFoundation.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GZIP.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -478,6 +500,7 @@
 			baseConfigurationReference = 631A84C90E2525DCAB1CA1C2 /* Pods-GXLAMapFoundation_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2L4B26T69J;
 				INFOPLIST_FILE = GXLAMapFoundation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -493,6 +516,7 @@
 			baseConfigurationReference = B6C53CD66B2AA7967CC98793 /* Pods-GXLAMapFoundation_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2L4B26T69J;
 				INFOPLIST_FILE = GXLAMapFoundation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -507,6 +531,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 169A64B008D768257598F608 /* Pods-GXLAMapFoundation_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 2L4B26T69J;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -529,6 +554,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CC7403D7BFBBFBA7F39ABB36 /* Pods-GXLAMapFoundation_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 2L4B26T69J;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",

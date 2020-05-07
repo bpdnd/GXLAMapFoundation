@@ -161,10 +161,10 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "${BUILT_PRODUCTS_DIR}/GXLAMapFoundation/GXLAMapFoundation.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/GZIP/GZIP.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "${BUILT_PRODUCTS_DIR}/GXLAMapFoundation/GXLAMapFoundation.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/GZIP/GZIP.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

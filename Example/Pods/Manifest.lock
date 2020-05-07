@@ -1,15 +1,22 @@
 PODS:
-  - GXLAMapFoundation (0.1.0)
+  - GXLAMapFoundation (0.1.0):
+    - GZIP
+  - GZIP (1.2.3)
 
 DEPENDENCIES:
   - GXLAMapFoundation (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - GZIP
 
 EXTERNAL SOURCES:
   GXLAMapFoundation:
     :path: "../"
 
 SPEC CHECKSUMS:
-  GXLAMapFoundation: a60f423cb5a7b6e88eea1a4ab9a9d0fc5003b295
+  GXLAMapFoundation: 31f015f14752f2b4c5c36bd22bdc95e962eedeac
+  GZIP: af5c90ef903776a7e9afe6ebebd794a84a2929d4
 
 PODFILE CHECKSUM: 2fc852e0bc4dec2496a66ccbf260d2ebc8faaa46
 
