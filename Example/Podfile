@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'GXLAMapFoundation_Example' do
+  pod 'GXLAMapFoundation', :path => '../'
+
+  target 'GXLAMapFoundation_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
